@@ -3,108 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAE OS - Página Oficial</title>
+  <title>CAE OS</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #222;
+      background-color: #ffffff;
+      color: #000000;
     }
     header {
-      background: linear-gradient(90deg, #003366, #cc0000);
+      background-color: #002868; /* Azul institucional */
       color: white;
       text-align: center;
-      padding: 2rem;
+      padding: 1.5em 0;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.5em;
     }
     header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.2rem;
+      margin: 0.5em 0 0;
+      font-size: 1.2em;
     }
-    main {
-      padding: 2rem;
+    nav {
+      background-color: #bf0a30; /* Rojo institucional */
+      padding: 0.8em;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
     }
     section {
-      margin-bottom: 2rem;
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
     }
     section h2 {
-      color: #003366;
-      border-bottom: 2px solid #cc0000;
-      display: inline-block;
-      padding-bottom: 0.3rem;
+      color: #002868;
+      margin-top: 1.2em;
     }
-    .image-container {
-      text-align: center;
-      margin: 2rem 0;
+    .info-img {
+      display: block;
+      margin: 2em auto;
+      max-width: 90%;
+      border: 3px solid #bf0a30;
+      border-radius: 10px;
     }
     footer {
-      background: #003366;
+      background-color: #002868;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 1.5em 0;
+      margin-top: 2em;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>CAE OS</h1>
-    <p>Sistema operativo educativo desarrollado para la comunidad</p>
+    <p>Rápido, funcional y creado para todos</p>
   </header>
 
-  <main>
-    <section>
-      <h2>¿Qué es CAE OS?</h2>
-      <p>
-        CAE OS es un sistema operativo diseñado con el objetivo de facilitar el aprendizaje, la experimentación
-        y la investigación en el área de la tecnología. Está pensado para estudiantes, docentes y entusiastas
-        que buscan un entorno ligero, seguro y adaptado a las necesidades actuales de la educación.
-      </p>
-      <p>
-        Nace como un proyecto académico con una visión clara: ofrecer una herramienta accesible, estable
-        y con un enfoque práctico que ayude a los usuarios a mejorar sus habilidades en computación y
-        programación, sin necesidad de contar con equipos de alto rendimiento.
-      </p>
-    </section>
+  <nav>
+    <a href="#que-es">¿Qué es?</a>
+    <a href="#caracteristicas">Características</a>
+    <a href="#pasos">Pasos de instalación</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-    <section>
-      <h2>Características principales</h2>
-      <ul>
-        <li>Ligero y optimizado para equipos de bajos recursos.</li>
-        <li>Interfaz sencilla e intuitiva basada en XFCE.</li>
-        <li>Compatibilidad con una amplia gama de hardware.</li>
-        <li>Enfoque educativo: herramientas preinstaladas para el aprendizaje.</li>
-        <li>Personalización: posibilidad de adaptarlo a distintos proyectos académicos.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Instalación y uso</h2>
-      <p>
-        Actualmente, CAE OS está disponible como una versión en vivo (Live). Esto significa que se puede probar
-        directamente desde una memoria USB sin necesidad de instalarlo en el disco duro.
-      </p>
-      <p>
-        Próximamente se habilitarán versiones descargables e instalables, para que puedas disfrutar de todas sus
-        funciones de manera completa.
-      </p>
-      <div class="image-container">
-        <img src="Infografia pasos para una infografia kawaii rosado.png" alt="Infografía de instalación" width="500">
-      </div>
-    </section>
-
-    <section>
-      <h2>Contacto</h2>
-      <p>
-        Si quieres más información, colaborar en el desarrollo o aportar ideas, puedes escribirnos al correo:
-        <strong>ahmedcaeos@gmail.com</strong>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>CAE OS - Proyecto acad
+  <section id="que-es">
+    <h2>¿Qué es CAE OS?</h2>
+    <p>
+      CAE OS es un sistema operativo desarrollado con el objetivo de ser ligero, rápido y accesible 
+      para equipos de bajos y
