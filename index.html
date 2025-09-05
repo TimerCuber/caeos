@@ -1,140 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CAE OS — Distribución educativa ligera</title>
-  <meta name="description" content="CAE OS es una distribución educativa, ligera y rápida basada en Linux (Debian) para PCs con recursos limitados en entornos escolares." />
-  <meta name="theme-color" content="#0f172a" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAE OS - Página Oficial</title>
   <style>
-    :root{
-      --bg:#0f172a;--panel:#111b2e;--muted:#94a3b8;--text:#e5e7eb;--accent:#38bdf8;--accent2:#22d3ee;--radius:16px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #222;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Ubuntu,sans-serif;background:radial-gradient(1000px 600px at 10% -10%,rgba(56,189,248,.15),transparent 60%),radial-gradient(800px 500px at 90% -20%,rgba(34,211,238,.12),transparent 60%),var(--bg);color:var(--text);line-height:1.65}
-    header{position:sticky;top:0;background:rgba(15,23,42,.8);backdrop-filter:blur(8px);border-bottom:1px solid rgba(148,163,184,.15);z-index:10}
-    .wrap{max-width:1000px;margin:0 auto;padding:0 1rem}
-    .hero{padding:2.25rem 0;display:flex;flex-direction:column;gap:.5rem}
-    .brand{display:flex;align-items:center;gap:.75rem}
-    .logo{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:800;color:#0b1220}
-    h1{font-size:clamp(1.4rem,2.5vw,1.8rem);margin:0}
-    nav{display:flex;gap:1rem;flex-wrap:wrap}
-    nav a{color:var(--text);text-decoration:none;font-weight:600;opacity:.9}
-    nav a:hover{color:var(--accent)}
-    main{max-width:1000px;margin:0 auto;padding:2rem 1rem;display:grid;gap:1.5rem}
-    section{background:var(--panel);border:1px solid rgba(148,163,184,.15);border-radius:var(--radius);padding:1.25rem;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    section h2{margin-top:0;color:var(--accent)}
-    .grid-2{display:grid;grid-template-columns:1fr;gap:1rem}
-    @media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr}}
-    ul{margin:0;padding-left:1.2rem}
-    .badge{display:inline-block;background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.35);color:var(--accent);padding:.2rem .5rem;border-radius:999px;font-size:.8rem;font-weight:700}
-    .cta{display:inline-block;margin-top:.75rem;padding:.8rem 1.1rem;background:var(--accent);color:#0b1220;font-weight:800;border-radius:12px;text-decoration:none}
-    .cta[aria-disabled="true"]{opacity:.7;cursor:default}
-    .note{color:var(--muted);font-size:.95rem}
-    footer{border-top:1px solid rgba(148,163,184,.15);color:var(--muted);text-align:center;padding:1.5rem}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:.5rem}
-    .card{background:#0c1526;border:1px solid rgba(148,163,184,.15);border-radius:14px;padding:1rem}
-    .muted{color:var(--muted)}
-    code{background:rgba(148,163,184,.12);border:1px solid rgba(148,163,184,.2);padding:.1rem .35rem;border-radius:6px}
+    header {
+      background: linear-gradient(90deg, #003366, #cc0000);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+    main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    section h2 {
+      color: #003366;
+      border-bottom: 2px solid #cc0000;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .image-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap hero">
-      <div class="brand">
-        <div class="logo">CA</div>
-        <h1>CAE OS — Distribución educativa ligera (basada en Debian)</h1>
-      </div>
-      <nav>
-        <a href="#intro">Inicio</a>
-        <a href="#objetivos">Objetivos</a>
-        <a href="#caracteristicas">Características</a>
-        <a href="#metodologia">Metodología</a>
-        <a href="#resultados">Resultados</a>
-        <a href="#descargas">Descargas</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
+    <h1>CAE OS</h1>
+    <p>Sistema operativo educativo desarrollado para la comunidad</p>
   </header>
 
   <main>
-    <section id="intro">
-      <span class="badge">Proyecto educativo</span>
+    <section>
       <h2>¿Qué es CAE OS?</h2>
-      <p>CAE OS es una distribución educativa, ligera y rápida, creada para <strong>PCs con recursos limitados</strong> en escuelas y entornos de aprendizaje. Basada en Linux (Debian), prioriza rendimiento, simpleza y compatibilidad para ampliar el acceso a la tecnología.</p>
-      <p class="note">Origen: Semillero de Investigación Colegio Albert Einstein (SICAE).</p>
+      <p>
+        CAE OS es un sistema operativo diseñado con el objetivo de facilitar el aprendizaje, la experimentación
+        y la investigación en el área de la tecnología. Está pensado para estudiantes, docentes y entusiastas
+        que buscan un entorno ligero, seguro y adaptado a las necesidades actuales de la educación.
+      </p>
+      <p>
+        Nace como un proyecto académico con una visión clara: ofrecer una herramienta accesible, estable
+        y con un enfoque práctico que ayude a los usuarios a mejorar sus habilidades en computación y
+        programación, sin necesidad de contar con equipos de alto rendimiento.
+      </p>
     </section>
 
-    <section id="objetivos" class="grid-2">
-      <div>
-        <h2>Objetivo general</h2>
-        <p>Desarrollar una distribución educativa de Linux <strong>ligera y funcional</strong> para escuelas con recursos computacionales limitados.</p>
-      </div>
-      <div>
-        <h2>Objetivos específicos</h2>
-        <ul>
-          <li>Investigar y adaptar distribuciones ligeras para lograr un buen desempeño en hardware antiguo.</li>
-          <li>Incorporar herramientas educativas y de productividad libres.</li>
-          <li>Optimizar la experiencia para estudiantes y docentes con una interfaz sencilla.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="caracteristicas">
+    <section>
       <h2>Características principales</h2>
-      <div class="cards">
-        <div class="card"><strong>⚡ Rápido</strong><br><span class="muted">Optimizado para equipos antiguos.</span></div>
-        <div class="card"><strong>🖥️ Interfaz sencilla</strong><br><span class="muted">Aprendizaje y uso sin fricción.</span></div>
-        <div class="card"><strong>🎓 Enfoque educativo</strong><br><span class="muted">Incluye apps de estudio y productividad.</span></div>
-        <div class="card"><strong>🔓 Software libre</strong><br><span class="muted">Basado en Debian para estabilidad.</span></div>
-        <div class="card"><strong>🌐 Acceso y gratuidad</strong><br><span class="muted">Pensado para contextos con limitaciones.</span></div>
+      <ul>
+        <li>Ligero y optimizado para equipos de bajos recursos.</li>
+        <li>Interfaz sencilla e intuitiva basada en XFCE.</li>
+        <li>Compatibilidad con una amplia gama de hardware.</li>
+        <li>Enfoque educativo: herramientas preinstaladas para el aprendizaje.</li>
+        <li>Personalización: posibilidad de adaptarlo a distintos proyectos académicos.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Instalación y uso</h2>
+      <p>
+        Actualmente, CAE OS está disponible como una versión en vivo (Live). Esto significa que se puede probar
+        directamente desde una memoria USB sin necesidad de instalarlo en el disco duro.
+      </p>
+      <p>
+        Próximamente se habilitarán versiones descargables e instalables, para que puedas disfrutar de todas sus
+        funciones de manera completa.
+      </p>
+      <div class="image-container">
+        <img src="Infografia pasos para una infografia kawaii rosado.png" alt="Infografía de instalación" width="500">
       </div>
     </section>
 
-    <section id="metodologia">
-      <h2>Metodología</h2>
-      <ol>
-        <li><strong>Diagnóstico</strong> — Revisión de necesidades pedagógicas y técnicas.</li>
-        <li><strong>Construcción</strong> — Personalización de la distribución.</li>
-        <li><strong>Pruebas</strong> — Validación en hardware real.</li>
-        <li><strong>Evaluación</strong> — Retroalimentación con docentes y estudiantes.</li>
-      </ol>
-    </section>
-
-    <section id="resultados" class="grid-2">
-      <div>
-        <h2>Resultados</h2>
-        <ul>
-          <li>Alternativa real para escuelas con computadoras de bajos recursos.</li>
-          <li>Compatibilidad con múltiples programas educativos.</li>
-          <li>Interfaz clara que facilita el aprendizaje.</li>
-        </ul>
-      </div>
-      <div>
-        <h2>Estado del arte</h2>
-        <p class="muted">Basado en Linux/Debian, aprovechando su estabilidad, seguridad y comunidad. Se prioriza el uso eficiente de memoria y CPU para dar nueva vida a equipos antiguos.</p>
-      </div>
-    </section>
-
-    <section id="descargas">
-      <h2>Descargas</h2>
-      <p>Las <strong>ISOs oficiales</strong> estarán disponibles pronto. Mientras tanto, puedes seguir el proyecto y prepararte para instalar CAE OS cuando se libere la primera versión.</p>
-      <a class="cta" aria-disabled="true" href="#">Descarga próximamente</a>
-      <p class="note">Cuando tengas un enlace real (Drive, Mega o release de GitHub), reemplaza el <code>href="#"</code> por la URL de descarga.</p>
-    </section>
-
-    <section id="contacto">
+    <section>
       <h2>Contacto</h2>
-      <p>¿Tienes dudas, ideas o quieres colaborar?</p>
-      <p><strong>Email:</strong> <a href="mailto:contactocaeos@gmail.com" style="color:var(--accent)">contactocaeos@gmail.com</a></p>
+      <p>
+        Si quieres más información, colaborar en el desarrollo o aportar ideas, puedes escribirnos al correo:
+        <strong>ahmedcaeos@gmail.com</strong>
+      </p>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">
-      CAE OS © 2025 — Proyecto educativo de código abierto. Hecho con ❤️ para la comunidad.
-    </div>
-  </footer>
-</body>
-</html>
+    <p>CAE OS - Proyecto acad
