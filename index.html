@@ -42,7 +42,8 @@
       width:40px;height:40px;border-radius:50%;
       background:linear-gradient(135deg,var(--accent),var(--accent2));
       display:grid;place-items:center;
-      font-weight:800;color:#fff
+      font-weight:800;color:#fff;
+      font-size:0.9rem;
     }
     h1{font-size:clamp(1.4rem,2.5vw,1.8rem);margin:0}
     nav{display:flex;gap:1rem;flex-wrap:wrap}
@@ -97,7 +98,7 @@
   <header>
     <div class="wrap hero">
       <div class="brand">
-        <img src="logo.png" alt="Logo CAE OS" class="logo">
+        <div class="logo">CAE</div>
         <h1>CAE OS — Distribución educativa ligera (basada en Debian)</h1>
       </div>
       <nav>
@@ -118,12 +119,24 @@
       <p>CAE OS es una distribución educativa, ligera y rápida, creada para <strong>PCs con recursos limitados</strong> en escuelas y entornos de aprendizaje. Basada en Linux (Debian), prioriza rendimiento, simpleza y compatibilidad para ampliar el acceso a la tecnología.</p>
       <p class="note">Origen: Semillero de Investigación Colegio Albert Einstein (SICAE).</p>
     </section>
-  </main>
 
-  <footer>
-    <div class="wrap">
-      CAE OS © 2025 — Proyecto educativo de código abierto. Hecho con ❤️ para la comunidad.
-    </div>
-  </footer>
-</body>
-</html>
+    <section id="objetivos" class="grid-2">
+      <div>
+        <h2>Objetivo general</h2>
+        <p>Desarrollar una distribución educativa de Linux <strong>ligera y funcional</strong> para escuelas con recursos computacionales limitados.</p>
+      </div>
+      <div>
+        <h2>Objetivos específicos</h2>
+        <ul>
+          <li>Investigar y adaptar distribuciones ligeras para lograr un buen desempeño en hardware antiguo.</li>
+          <li>Incorporar herramientas educativas y de productividad libres.</li>
+          <li>Optimizar la experiencia para estudiantes y docentes con una interfaz sencilla.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="caracteristicas">
+      <h2>Características principales</h2>
+      <div class="cards">
+        <div class="card"><strong>⚡ Rápido</strong><br><span class="muted">Optimizado para equipos antiguos.</span></div>
+        <div class="card"><strong>🖥️ Interfaz sencilla</strong><br><span class="muted">Aprendizaje y uso sin fricción.</span></div>
