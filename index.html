@@ -3,147 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAE OS — Distribución educativa ligera</title>
+  <title>CAE OS</title>
   <style>
-    :root {
-      --blue: #0077ff;
-      --red: #ff0033;
-      --bg: #f9f9f9;
-      --text: #222;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      background: #f9f9f9;
+      color: #222;
+      text-align: center;
     }
 
     header {
-      background: linear-gradient(90deg, var(--blue), var(--red));
+      background: linear-gradient(90deg, #0077ff, #ff0033);
       color: white;
-      text-align: center;
       padding: 20px;
     }
 
-    header .brand {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    header img {
-      height: 60px;
-    }
-
-    nav.main-nav {
-      background: linear-gradient(90deg, var(--blue), var(--red));
+    nav {
+      background: linear-gradient(90deg, #0077ff, #ff0033);
       padding: 12px;
       display: flex;
       justify-content: center;
       gap: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     }
 
-    nav.main-nav a {
+    nav a {
       color: white;
-      text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
+      text-decoration: none;
     }
 
-    nav.main-nav a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
 
     main {
-      max-width: 900px;
+      max-width: 800px;
       margin: auto;
       padding: 20px;
+      text-align: left;
     }
 
     section {
       margin-bottom: 40px;
     }
 
-    h2 {
-      color: var(--blue);
-    }
-
     footer {
-      text-align: center;
-      padding: 20px;
       background: #eee;
-      font-size: 0.9em;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="brand">
-      <img src="logo.png" alt="Logo CAE OS">
-      <div>
-        <h1>CAE OS — Distribución educativa ligera</h1>
-        <p>Proyecto académico | Optimizado para PCs con recursos limitados</p>
-      </div>
-    </div>
+    <h1>CAE OS — Distribución educativa ligera</h1>
+    <p>Optimizado para PCs con recursos limitados</p>
   </header>
 
-  <nav class="main-nav" aria-label="Navegación principal">
+  <nav>
     <a href="#intro">Inicio</a>
     <a href="#objetivos">Objetivos</a>
     <a href="#caracteristicas">Características</a>
-    <a href="#metodologia">Metodología</a>
-    <a href="#resultados">Resultados</a>
-    <a href="#conclusion">Conclusión</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
   <main>
     <section id="intro">
       <h2>Introducción</h2>
-      <p>Bienvenido a CAE OS, una distribución educativa ligera basada en Linux Debian, creada para revitalizar computadoras antiguas en entornos escolares.</p>
+      <p>Bienvenido a CAE OS, un sistema operativo educativo ligero basado en Debian.</p>
     </section>
 
     <section id="objetivos">
       <h2>Objetivos</h2>
-      <p>Facilitar el acceso a la educación digital en colegios con recursos limitados.</p>
+      <p>Llevar educación digital a equipos antiguos en entornos escolares.</p>
     </section>
 
     <section id="caracteristicas">
       <h2>Características</h2>
       <ul>
-        <li>Basada en Debian estable.</li>
-        <li>Incluye programas educativos como GeoGebra, Scratch y Stellarium.</li>
-        <li>Optimizada para PCs de bajos recursos.</li>
+        <li>Ligero y rápido</li>
+        <li>Compatible con PCs viejas</li>
+        <li>Incluye software educativo</li>
       </ul>
-    </section>
-
-    <section id="metodologia">
-      <h2>Metodología</h2>
-      <p>Se usó Refracta Snapshot para crear la ISO personalizada, integrando herramientas educativas.</p>
-    </section>
-
-    <section id="resultados">
-      <h2>Resultados</h2>
-      <p>El sistema demostró ser estable, ligero y funcional en equipos antiguos.</p>
-    </section>
-
-    <section id="conclusion">
-      <h2>Conclusión</h2>
-      <p>CAE OS es una alternativa real para mejorar la educación digital en entornos de bajos recursos.</p>
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
-      <p>¿Quieres más información? Escríbenos a <b>contacto@caeos.org</b></p>
+      <p>📧 contacto@caeos.org</p>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 CAE OS — Proyecto académico</p>
+    <p>© 2025 CAE OS</p>
   </footer>
 </body>
 </html>
