@@ -30,4 +30,269 @@
       margin:0;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       background:
-        radial-gradient(800px 500px at 10% -10%, rgba(191,10,48,.06), tr
+        radial-gradient(800px 500px at 10% -10%, rgba(191,10,48,.06), transparent 40%),
+        radial-gradient(700px 400px at 90% -10%, rgba(0,40,104,.06), transparent 40%),
+        linear-gradient(180deg,#ffffff 0%, #f3f5f9 100%);
+      color: #081126;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background: linear-gradient(90deg, var(--blue), var(--red));
+      color:var(--white);
+      padding:18px 12px;
+      box-shadow:0 6px 20px rgba(2,6,23,0.12);
+      border-bottom: 3px solid rgba(255,255,255,0.06);
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+    /* logo image (if exists) */
+    .site-logo{
+      width:64px;height:64px;border-radius:12px;object-fit:cover;display:block;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+      border: 2px solid rgba(255,255,255,0.12);
+      background:linear-gradient(135deg,var(--red),var(--blue));
+    }
+    /* fallback circle (if logo.png missing) */
+    .logo-fallback{
+      width:64px;height:64px;border-radius:12px;
+      display:grid;place-items:center;font-weight:800;color:var(--white);
+      background:linear-gradient(135deg,var(--red),var(--blue));
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+      border: 2px solid rgba(255,255,255,0.12);
+      font-family: Inter, system-ui, sans-serif;
+      font-size:1.0rem;
+      letter-spacing:0.6px;
+    }
+
+    .title-wrap{
+      display:flex;flex-direction:column;gap:4px;
+    }
+    .title-wrap h1{
+      margin:0;font-size:1.1rem;font-weight:800;
+      letter-spacing:0.2px;
+    }
+    .title-wrap p{margin:0;font-size:0.85rem;opacity:0.95}
+
+    /* nav */
+    nav.main-nav{
+      background: linear-gradient(90deg, var(--blue), var(--red));
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      position: sticky;
+      top:80px;
+      z-index:40;
+    }
+    nav.main-nav a{
+      color: rgba(255,255,255,0.95);
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:0.9rem;
+      background: rgba(255,255,255,0.05);
+      transition: all .18s ease;
+    }
+    nav.main-nav a:hover{ transform:translateY(-2px); box-shadow:0 6px 14px rgba(2,6,23,0.12) }
+
+    /* Main layout */
+    main{max-width:1100px;margin:28px auto;padding:0 16px 60px}
+    section{
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(250,250,250,0.96));
+      border-radius: var(--radius);
+      padding:20px;
+      box-shadow: 0 10px 30px rgba(9,16,27,0.06);
+      border:1px solid rgba(2,6,23,0.04);
+    }
+    section + section{margin-top:18px}
+    section h2{
+      margin:0 0 12px 0;
+      color:var(--blue);
+      font-size:1.15rem;
+      display:inline-block;
+      border-left:6px solid var(--red);
+      padding-left:12px;
+      background: linear-gradient(90deg, rgba(0,40,104,0.02), transparent);
+      border-radius:6px;
+    }
+    p{margin:.6rem 0}
+    ul{margin: .6rem 0  .6rem 1.2rem}
+    li{margin:.45rem 0}
+
+    /* cards grid */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:10px}
+    .card{
+      background: linear-gradient(180deg,#ffffff,#fbfbfd);
+      padding:14px;border-radius:12px;border:1px solid rgba(2,6,23,0.04);
+    }
+    .muted{color:#556178;font-size:0.95rem}
+
+    footer{
+      max-width:1100px;margin:30px auto;padding:18px;
+      text-align:center;color:#555a66;font-size:0.95rem;
+    }
+
+    /* responsive tweaks */
+    @media (max-width:720px){
+      .brand{gap:10px}
+      .title-wrap h1{font-size:1rem}
+      nav.main-nav{gap:8px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <!-- Intento de mostrar logo.png; si falla, se oculta y aparece el fallback -->
+        <img src="logo.png" alt="Logo CAE OS" class="site-logo" id="siteLogo"
+             onerror="this.style.display='none';document.getElementById('fallback').style.display='grid'">
+        <div id="fallback" class="logo-fallback" style="display:none">CAE</div>
+
+        <div class="title-wrap">
+          <h1>CAE OS — Distribución educativa ligera</h1>
+          <p>Proyecto académico | Optimizado para PCs con recursos limitados</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú de navegación separado -->
+  <nav class="main-nav" aria-label="Navegación principal">
+    <a href="#intro">Inicio</a>
+    <a href="#objetivos">Objetivos</a>
+    <a href="#caracteristicas">Características</a>
+    <a href="#metodologia">Metodología</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#conclusion">Conclusión</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main>
+    <!-- INTRO -->
+    <section id="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title">¿Qué es CAE OS?</h2>
+      <p>
+        CAE OS es una distribución educativa, ligera y estable, creada para <strong>dar nueva vida a PCs con recursos limitados</strong>.
+        Basada en Debian y optimizada con un entorno ligero, su propósito principal es facilitar el acceso a herramientas
+        educativas y promover el uso eficiente del hardware disponible en instituciones escolares.
+      </p>
+      <p class="muted">
+        Origen: Semillero de Investigación — Colegio Albert Einstein (SICAE).
+      </p>
+    </section>
+
+    <!-- OBJETIVOS -->
+    <section id="objetivos" aria-labelledby="objetivos-title">
+      <h2 id="objetivos-title">Objetivos</h2>
+      <div class="cards">
+        <div class="card">
+          <strong>Objetivo general</strong>
+          <p class="muted">Desarrollar una distribución educativa ligera, estable y funcional para escuelas con equipos antiguos o de bajos recursos.</p>
+        </div>
+        <div class="card">
+          <strong>Objetivos específicos</strong>
+          <ul>
+            <li>Adaptar y optimizar una base Debian para rendimiento en hardware limitado.</li>
+            <li>Integrar aplicaciones educativas libres y de uso escolar.</li>
+            <li>Proveer documentación y guías de instalación y uso para docentes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARACTERÍSTICAS -->
+    <section id="caracteristicas" aria-labelledby="carac-title">
+      <h2 id="carac-title">Características principales</h2>
+      <div class="cards">
+        <div class="card">
+          <strong>🔋 Ligereza y rendimiento</strong>
+          <p class="muted">Optimizada para consumir poca RAM y CPU, ideal para equipos con 2–8 GB de RAM.</p>
+        </div>
+        <div class="card">
+          <strong>🖥 Interfaz accesible</strong>
+          <p class="muted">Entorno XFCE personalizado con menús limpios y herramientas educativas preinstaladas.</p>
+        </div>
+        <div class="card">
+          <strong>🔒 Software libre</strong>
+          <p class="muted">Basado en Debian para estabilidad y soporte comunitario; todo el software es libre y auditable.</p>
+        </div>
+        <div class="card">
+          <strong>🌐 Compatibilidad</strong>
+          <p class="muted">Drivers y ajustes para funcionar en una amplia variedad de hardware antiguo y moderno.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGÍA -->
+    <section id="metodologia" aria-labelledby="metod-title">
+      <h2 id="metod-title">Metodología</h2>
+      <p>
+        El desarrollo de CAE OS sigue un flujo iterativo: diagnóstico de necesidades → selección de base (Debian) →
+        personalización y optimización → pruebas en hardware real → retroalimentación con docentes y estudiantes →
+        ajustes y mejoras. Se prioriza la reusabilidad del código y la documentación paso a paso para replicar la
+        construcción de la ISO (Refracta Snapshot, scripts de configuración, etc.).
+      </p>
+      <ol>
+        <li><strong>Diagnóstico:</strong> levantamiento de requisitos en centros educativos.</li>
+        <li><strong>Desarrollo:</strong> creación y configuración de la imagen base.</li>
+        <li><strong>Pruebas:</strong> ejecución en equipos reales y reporte de compatibilidad.</li>
+        <li><strong>Documentación:</strong> guías de uso y mantenimiento para docentes.</li>
+      </ol>
+    </section>
+
+    <!-- RESULTADOS -->
+    <section id="resultados" aria-labelledby="res-title">
+      <h2 id="res-title">Resultados</h2>
+      <p>
+        En pruebas preliminares, CAE OS mostró tiempos de arranque reducidos y un uso de memoria significativamente menor
+        frente a instalaciones estándar. Los usuarios reportaron mejoras en la fluidez general, especialmente en tareas
+        de ofimática, navegación con pestañas ligeras y actividades educativas.
+      </p>
+      <p class="muted">
+        Estos resultados sugieren que CAE OS es una alternativa viable para escuelas que necesitan maximizar la vida útil
+        de sus equipos sin grandes inversiones en hardware.
+      </p>
+    </section>
+
+    <!-- CONCLUSIÓN -->
+    <section id="conclusion" aria-labelledby="concl-title">
+      <h2 id="concl-title">Conclusión</h2>
+      <p>
+        CAE OS es más que una imagen: es una iniciativa para democratizar el acceso a la tecnología en contextos educativos.
+        Con una base estable, optimizaciones focalizadas y enfoque en usabilidad, se pretende ofrecer una herramienta
+        práctica y replicable que contribuya a la formación digital de estudiantes y docentes.
+      </p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" aria-labelledby="cont-title">
+      <h2 id="cont-title">Contacto</h2>
+      <p>¿Quieres aportar, colaborar o probar CAE OS en tu institución?</p>
+      <p><strong>Email:</strong> <a href="mailto:contactocaeos@gmail.com" style="color:var(--blue)">contactocaeos@gmail.com</a></p>
+      <p class="muted">También aceptamos feedback, reportes y propuestas de mejora.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      CAE OS © 2025 — Proyecto educativo de código abierto. Hecho con ❤️ para la comunidad.
+    </div>
+  </footer>
+
+  <!-- Nota: si subes logo.png en la misma carpeta que este index.html, aparecerá en el header; si no, se mostrará el fallback. -->
+</body>
+</html>
