@@ -54,25 +54,31 @@
       gap:14px;
       align-items:center;
     }
-    /* logo image (if exists) */
-    .site-logo{
-      width:64px;height:64px;border-radius:12px;object-fit:cover;display:block;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-      border: 2px solid rgba(255,255,255,0.12);
-      background:linear-gradient(135deg,var(--red),var(--blue));
-    }
-    /* fallback circle (if logo.png missing) */
-    .logo-fallback{
-      width:64px;height:64px;border-radius:12px;
-      display:grid;place-items:center;font-weight:800;color:var(--white);
-      background:linear-gradient(135deg,var(--red),var(--blue));
-      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-      border: 2px solid rgba(255,255,255,0.12);
-      font-family: Inter, system-ui, sans-serif;
-      font-size:1.0rem;
-      letter-spacing:0.6px;
-    }
-
+   /* logo image (if exists) */
+.site-logo{
+  width:120px;   /* antes 64px */
+  height:120px;  /* antes 64px */
+  border-radius:20px;
+  object-fit:cover;
+  display:block;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  border: 2px solid rgba(255,255,255,0.12);
+  background:linear-gradient(135deg,var(--red),var(--blue));
+}
+/* fallback circle (if logo.png missing) */
+.logo-fallback{
+  width:120px;   /* antes 64px */
+  height:120px;  /* antes 64px */
+  border-radius:20px;
+  display:grid;place-items:center;
+  font-weight:800;color:var(--white);
+  background:linear-gradient(135deg,var(--red),var(--blue));
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  border: 2px solid rgba(255,255,255,0.12);
+  font-family: Inter, system-ui, sans-serif;
+  font-size:1.4rem; /* subí el tamaño de la letra */
+  letter-spacing:0.6px;
+}
     .title-wrap{
       display:flex;flex-direction:column;gap:4px;
     }
